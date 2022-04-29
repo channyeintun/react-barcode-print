@@ -24,7 +24,6 @@ function Container(_ref) {
   }, /*#__PURE__*/_react.default.createElement("div", {
     style: {
       padding: 0,
-      boxSizing: 'border-box',
       margin: 'auto',
       display: 'flex',
       width: 'calc(102mm - 3mm)',

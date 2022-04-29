@@ -18,23 +18,23 @@ function Label(_ref) {
     sku
   } = _ref;
   return /*#__PURE__*/_react.default.createElement("div", {
+    className: "card",
     style: {
       padding: 0,
       margin: 0,
-      boxSizing: 'border-box',
-      height: 'calc(19mm - 1px)',
-      width: '32mm'
+      height: '0.740in',
+      width: '32mm',
+      overflow: 'hidden'
     }
   }, /*#__PURE__*/_react.default.createElement("div", {
     style: {
       padding: 0,
       margin: 0,
+      overflow: 'hidden',
       position: 'relative',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'end',
-      height: '100%'
+      display: 'grid',
+      placeItems: 'center',
+      height: 'calc(100% - 2px)'
     }
   }, /*#__PURE__*/_react.default.createElement("label", {
     style: {

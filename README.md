@@ -8,7 +8,7 @@
       import { Barcode, Faker } from 'react-barcode-print';
 
       function App(){
-            return <Barcode labels={Faker()} />
+            return <Barcode labels={Faker(60)} />
       }
 ```
   

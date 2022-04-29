@@ -7,8 +7,8 @@ exports.Faker = Faker;
 
 require("core-js/modules/web.dom-collections.iterator.js");
 
-function Faker() {
-  return [...new Array(21)].map((item, index) => {
+function Faker(number) {
+  return [...new Array(number)].map((item, index) => {
     const min = 10000000;
     const max = 99999999;
     const min2 = 1000;
