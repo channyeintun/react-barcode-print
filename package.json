@@ -1,7 +1,7 @@
 {
       "name": "react-barcode-print",
       "description": "React Component to generate barcode for printing",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "private": false,
       "main": "dist/index.js",
       "module": "dist/index.js",

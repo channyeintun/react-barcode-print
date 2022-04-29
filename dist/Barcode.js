@@ -74,7 +74,7 @@ function Barcode(_ref) {
 
 Barcode.propTypes = {
   labels: _propTypes.default.arrayOf(_propTypes.default.shape({
-    id: _propTypes.default.string,
+    id: _propTypes.default.number,
     price: _propTypes.default.number,
     sku: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number])
   })).isRequired

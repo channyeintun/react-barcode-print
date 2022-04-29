@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Label = Label;
 
+var _react = _interopRequireDefault(require("react"));
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -14,7 +16,7 @@ function Label(_ref) {
     myRef,
     price
   } = _ref;
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     style: {
       padding: 0,
       margin: 0,
@@ -22,7 +24,7 @@ function Label(_ref) {
       height: 'calc(19mm - 1px)',
       width: '32mm'
     }
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     style: {
       padding: 0,
       margin: 0,
@@ -32,7 +34,7 @@ function Label(_ref) {
       alignItems: 'end',
       height: '100%'
     }
-  }, /*#__PURE__*/React.createElement("label", {
+  }, /*#__PURE__*/_react.default.createElement("label", {
     style: {
       position: 'absolute',
       top: 0,
@@ -40,7 +42,7 @@ function Label(_ref) {
       fontSize: '12px',
       transform: 'translateX(-50%)'
     }
-  }, price, "ks"), /*#__PURE__*/React.createElement("img", {
+  }, price, "ks"), /*#__PURE__*/_react.default.createElement("img", {
     ref: myRef,
     src: "",
     alt: "test"

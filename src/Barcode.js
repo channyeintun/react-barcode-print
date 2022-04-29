@@ -55,7 +55,7 @@ export function Barcode({ labels }) {
 Barcode.propTypes = {
       labels: PropTypes.arrayOf(
             PropTypes.shape({
-                  id: PropTypes.string,
+                  id: PropTypes.number,
                   price: PropTypes.number,
                   sku: PropTypes.oneOfType([
                         PropTypes.string,
