@@ -8,6 +8,7 @@
       import { Barcode, Faker } from 'react-barcode-print';
 
       function App(){
+            //can pass currencyUnit prop
             return <Barcode labels={Faker(60)} />
       }
 ```
