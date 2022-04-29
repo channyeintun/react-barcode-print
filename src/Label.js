@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export function Label({
       myRef,
       price,
-      sku
+      sku,
 }) {
       return (
             <div className='card' style={{
@@ -29,7 +29,7 @@ export function Label({
                               left: '50%',
                               fontSize: '12px',
                               transform: 'translateX(-50%)'
-                        }}>{price}ks</label>
+                        }}>{price}</label>
                         <img ref={myRef} src="" alt="test" />
                         <label style={{
                               position: 'absolute',

@@ -13,7 +13,7 @@ const JSBARCODE_OPTIONS = {
       displayValue: false
 };
 
-export function Barcode({ labels }) {
+export function Barcode({ labels, currencyUnit }) {
       const [bindRefData, setBindRefData] = useState(null);
 
       // generating barcode must happen only after mounted
@@ -48,7 +48,7 @@ export function Barcode({ labels }) {
                                     key={item.id}
                                     myRef={item.ref}
                                     sku={item.sku}
-                                    price={item.price} />)
+                                    price={item.price + currencyUnit} />)
                   }
             </Container>
       );
@@ -64,8 +64,10 @@ Barcode.propTypes = {
                         PropTypes.number,
                   ]),
             })).isRequired,
+      currencyUnit: PropTypes.string
 }
 
 Barcode.defaultProps = {
-      labels: []
+      labels: [],
+      currencyUnit: '$'
 }

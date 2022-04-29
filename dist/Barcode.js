@@ -40,7 +40,8 @@ const JSBARCODE_OPTIONS = {
 
 function Barcode(_ref) {
   let {
-    labels
+    labels,
+    currencyUnit
   } = _ref;
   const [bindRefData, setBindRefData] = (0, _react.useState)(null); // generating barcode must happen only after mounted
 
@@ -70,7 +71,7 @@ function Barcode(_ref) {
     key: item.id,
     myRef: item.ref,
     sku: item.sku,
-    price: item.price
+    price: item.price + currencyUnit
   })));
 }
 
@@ -79,8 +80,10 @@ Barcode.propTypes = {
     id: _propTypes.default.number,
     price: _propTypes.default.number,
     sku: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number])
-  })).isRequired
+  })).isRequired,
+  currencyUnit: _propTypes.default.string
 };
 Barcode.defaultProps = {
-  labels: []
+  labels: [],
+  currencyUnit: '$'
 };

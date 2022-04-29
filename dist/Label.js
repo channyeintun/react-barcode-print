@@ -44,7 +44,7 @@ function Label(_ref) {
       fontSize: '12px',
       transform: 'translateX(-50%)'
     }
-  }, price, "ks"), /*#__PURE__*/_react.default.createElement("img", {
+  }, price), /*#__PURE__*/_react.default.createElement("img", {
     ref: myRef,
     src: "",
     alt: "test"
