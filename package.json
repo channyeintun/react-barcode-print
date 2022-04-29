@@ -1,44 +1,40 @@
 {
       "name": "react-barcode-print",
-      "description": "React Component to generate barcode for printing",
-      "version": "0.3.2",
-      "private": false,
+      "version": "0.3.3",
+      "description": "react component to print barcode",
       "main": "dist/index.js",
-      "module": "dist/index.js",
       "files": [
             "dist",
             "README.md"
       ],
-      "keywords": [
-            "react-barcode",
-            "barcode-print",
-            "tsc-print",
-            "label-print"
-      ],
-      "homepage": "http://github.com/channyeintun/react-barcode-print",
-      "peerDependencies": {
-            "react": "^17.0.2 || ^18.0.0"
-      },
-      "dependencies": {
-            "@babel/polyfill": "^7.12.1",
-            "jsbarcode": "^3.11.5",
-            "prop-types": "^15.8.1"
-      },
       "scripts": {
             "build": "rm -rf dist && NODE_ENV=production babel src/ --out-dir dist --copy-files",
             "test": "echo \"Error: no test specified\" && exit 1"
       },
-      "author": "Chan Nyein Tun <chanyeintun@gmail.com>",
+      "peerDependencies": {
+            "react": "^17.0.2 || ^18.0.0"
+      },
       "repository": {
             "type": "git",
-            "url": "https://github.com/channyeintun/react-barcode-print.git"
+            "url": "git+https://github.com/channyeintun/react-barcode-print.git"
+      },
+      "keywords": [
+            "react-barcode"
+      ],
+      "author": "Chan Nyein Tun <chanyeintun@gmail.com>",
+      "license": "ISC",
+      "bugs": {
+            "url": "https://github.com/channyeintun/react-barcode-print/issues"
+      },
+      "homepage": "https://github.com/channyeintun/react-barcode-print#readme",
+      "dependencies": {
+            "jsbarcode": "^3.11.5",
+            "prop-types": "^15.8.1"
       },
       "devDependencies": {
             "@babel/cli": "^7.17.6",
-            "@babel/core": "^7.17.9",
+            "@babel/plugin-transform-react-jsx": "^7.17.3",
             "@babel/preset-env": "^7.16.11",
-            "@babel/preset-react": "^7.16.7",
-            "react": "^17.0.2",
-            "react-dom": "^17.0.2"
+            "@babel/preset-react": "^7.16.7"
       }
 }
