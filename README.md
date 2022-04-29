@@ -22,3 +22,6 @@
             }
       ]
 ```
+
+## Example Output
+![Output](https://raw.githubusercontent.com/channyeintun/react-barcode-print/main/images/barcode.png)
