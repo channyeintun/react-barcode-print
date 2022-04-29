@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 export function Label({
       myRef,
       price,
+      sku
 }) {
       return (
             <div style={{
@@ -18,18 +19,28 @@ export function Label({
                         margin: 0,
                         position: 'relative',
                         display: 'flex',
+                        flexDirection: 'column',
                         justifyContent: 'center',
                         alignItems: 'end',
                         height: '100%'
                   }}>
                         <label style={{
                               position: 'absolute',
-                              top: 0,
+                              top: 4,
                               left: '50%',
                               fontSize: '12px',
                               transform: 'translateX(-50%)'
                         }}>{price}ks</label>
                         <img ref={myRef} src="" alt="test" />
+                        <label style={{
+                              position: 'absolute',
+                              bottom: 0,
+                              textAlign: 'center',
+                              fontSize: '12px',
+                              fontWeight: '600',
+                              lineHeight: '1.13rem',
+                              width: '100%'
+                        }}>{sku}</label>
                   </div>
             </div>
       );
@@ -41,6 +52,10 @@ Label.propTypes = {
             PropTypes.shape({ current: PropTypes.instanceOf(Element) })
       ]).isRequired,
       price: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.number,
+      ]).isRequired,
+      sku: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.number,
       ]).isRequired,

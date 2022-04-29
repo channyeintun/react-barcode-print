@@ -34,7 +34,8 @@ const JSBARCODE_OPTIONS = {
   height: 30,
   fontSize: "12px",
   lineColor: 'black',
-  fontOptions: '800'
+  fontOptions: '800',
+  displayValue: false
 };
 
 function Barcode(_ref) {
@@ -68,6 +69,7 @@ function Barcode(_ref) {
   return /*#__PURE__*/_react.default.createElement(_Container.Container, null, bindRefData === null || bindRefData === void 0 ? void 0 : bindRefData.map(item => /*#__PURE__*/_react.default.createElement(_Label.Label, {
     key: item.id,
     myRef: item.ref,
+    sku: item.sku,
     price: item.price
   })));
 }

@@ -14,7 +14,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Label(_ref) {
   let {
     myRef,
-    price
+    price,
+    sku
   } = _ref;
   return /*#__PURE__*/_react.default.createElement("div", {
     style: {
@@ -30,6 +31,7 @@ function Label(_ref) {
       margin: 0,
       position: 'relative',
       display: 'flex',
+      flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'end',
       height: '100%'
@@ -37,7 +39,7 @@ function Label(_ref) {
   }, /*#__PURE__*/_react.default.createElement("label", {
     style: {
       position: 'absolute',
-      top: 0,
+      top: 4,
       left: '50%',
       fontSize: '12px',
       transform: 'translateX(-50%)'
@@ -46,12 +48,23 @@ function Label(_ref) {
     ref: myRef,
     src: "",
     alt: "test"
-  })));
+  }), /*#__PURE__*/_react.default.createElement("label", {
+    style: {
+      position: 'absolute',
+      bottom: 0,
+      textAlign: 'center',
+      fontSize: '12px',
+      fontWeight: '600',
+      lineHeight: '1.13rem',
+      width: '100%'
+    }
+  }, sku)));
 }
 
 Label.propTypes = {
   myRef: _propTypes.default.oneOfType([_propTypes.default.func, _propTypes.default.shape({
     current: _propTypes.default.instanceOf(Element)
   })]).isRequired,
-  price: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number]).isRequired
+  price: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number]).isRequired,
+  sku: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number]).isRequired
 };

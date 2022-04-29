@@ -9,7 +9,8 @@ const JSBARCODE_OPTIONS = {
       height: 30,
       fontSize: "12px",
       lineColor: 'black',
-      fontOptions: '800'
+      fontOptions: '800',
+      displayValue: false
 };
 
 export function Barcode({ labels }) {
@@ -46,6 +47,7 @@ export function Barcode({ labels }) {
                               item => <Label
                                     key={item.id}
                                     myRef={item.ref}
+                                    sku={item.sku}
                                     price={item.price} />)
                   }
             </Container>
