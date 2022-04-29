@@ -1,6 +1,6 @@
 
-export function Faker() {
-      return [...(new Array(21))].map((item, index) => {
+export function Faker(number) {
+      return [...(new Array(number))].map((item, index) => {
             const min = 10000000;
             const max = 99999999;
             const min2 = 1000;

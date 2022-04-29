@@ -5,7 +5,7 @@ import { Label } from "./Label";
 import { Container } from "./Container";
 
 const JSBARCODE_OPTIONS = {
-      width: 1,
+      width: 0.93,
       height: 30,
       fontSize: "12px",
       lineColor: 'black',

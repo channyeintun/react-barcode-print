@@ -11,7 +11,6 @@ export function Container({ children }) {
                   }}>
                         <div style={{
                               padding: 0,
-                              boxSizing: 'border-box',
                               margin: 'auto',
                               display: 'flex',
                               width: 'calc(102mm - 3mm)',

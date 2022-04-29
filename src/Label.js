@@ -7,22 +7,21 @@ export function Label({
       sku
 }) {
       return (
-            <div style={{
+            <div className='card' style={{
                   padding: 0,
                   margin: 0,
-                  boxSizing: 'border-box',
-                  height: 'calc(19mm - 1px)',
+                  height: '0.740in',
                   width: '32mm',
+                  overflow:'hidden'
             }}>
                   <div style={{
                         padding: 0,
                         margin: 0,
+                        overflow: 'hidden',
                         position: 'relative',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'center',
-                        alignItems: 'end',
-                        height: '100%'
+                        display: 'grid',
+                        placeItems: 'center',
+                        height:'calc(100% - 2px)'
                   }}>
                         <label style={{
                               position: 'absolute',
