@@ -9,15 +9,15 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _jsxRuntime = require("react/jsx-runtime");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function Label(_ref) {
-  let {
-    myRef,
-    price,
-    sku
-  } = _ref;
-  return /*#__PURE__*/_react.default.createElement("div", {
+  var myRef = _ref.myRef,
+      price = _ref.price,
+      sku = _ref.sku;
+  return /*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
     className: "card",
     style: {
       padding: 0,
@@ -25,46 +25,50 @@ function Label(_ref) {
       height: '0.740in',
       width: '32mm',
       overflow: 'hidden'
-    }
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    style: {
-      padding: 0,
-      margin: 0,
-      overflow: 'hidden',
-      position: 'relative',
-      display: 'grid',
-      placeItems: 'center',
-      height: 'calc(100% - 2px)'
-    }
-  }, /*#__PURE__*/_react.default.createElement("label", {
-    style: {
-      position: 'absolute',
-      top: 4,
-      left: '50%',
-      fontSize: '12px',
-      transform: 'translateX(-50%)'
-    }
-  }, price), /*#__PURE__*/_react.default.createElement("img", {
-    ref: myRef,
-    src: "",
-    alt: "test"
-  }), /*#__PURE__*/_react.default.createElement("label", {
-    style: {
-      position: 'absolute',
-      bottom: 0,
-      textAlign: 'center',
-      fontSize: '12px',
-      fontWeight: '600',
-      lineHeight: '1.13rem',
-      width: '100%'
-    }
-  }, sku)));
+    },
+    children: /*#__PURE__*/(0, _jsxRuntime.jsxs)("div", {
+      style: {
+        padding: 0,
+        margin: 0,
+        overflow: 'hidden',
+        position: 'relative',
+        display: 'grid',
+        placeItems: 'center',
+        height: 'calc(100% - 2px)'
+      },
+      children: [/*#__PURE__*/(0, _jsxRuntime.jsx)("label", {
+        style: {
+          position: 'absolute',
+          top: 4,
+          left: '50%',
+          fontSize: '12px',
+          transform: 'translateX(-50%)'
+        },
+        children: price
+      }), /*#__PURE__*/(0, _jsxRuntime.jsx)("img", {
+        ref: myRef,
+        src: "",
+        alt: "test"
+      }), /*#__PURE__*/(0, _jsxRuntime.jsx)("label", {
+        style: {
+          position: 'absolute',
+          bottom: 0,
+          textAlign: 'center',
+          fontSize: '12px',
+          fontWeight: '600',
+          lineHeight: '1.13rem',
+          width: '100%'
+        },
+        children: sku
+      })]
+    })
+  });
 }
 
 Label.propTypes = {
-  myRef: _propTypes.default.oneOfType([_propTypes.default.func, _propTypes.default.shape({
-    current: _propTypes.default.instanceOf(Element)
+  myRef: _propTypes["default"].oneOfType([_propTypes["default"].func, _propTypes["default"].shape({
+    current: _propTypes["default"].instanceOf(Element)
   })]).isRequired,
-  price: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number]).isRequired,
-  sku: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number]).isRequired
+  price: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].number]).isRequired,
+  sku: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].number]).isRequired
 };
