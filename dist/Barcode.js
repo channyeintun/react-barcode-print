@@ -99,7 +99,6 @@ function Barcode(_ref) {
   }, bindRefData === null || bindRefData === void 0 ? void 0 : bindRefData.map(function (item, index) {
     return /*#__PURE__*/_react["default"].createElement("div", {
       key: index,
-      ref: item.ref,
       style: {
         padding: 0,
         margin: 0,
@@ -126,7 +125,7 @@ function Barcode(_ref) {
         transform: 'translateX(-50%)'
       }
     }, item.price + currencyUnit), /*#__PURE__*/_react["default"].createElement("img", {
-      ref: myRef,
+      ref: item.ref,
       src: "",
       alt: "test"
     }), /*#__PURE__*/_react["default"].createElement("label", {

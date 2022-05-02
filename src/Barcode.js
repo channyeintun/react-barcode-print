@@ -55,7 +55,6 @@ export function Barcode({ labels, currencyUnit }) {
                         {
                               bindRefData?.map(
                                     (item, index) => <div key={index}
-                                          ref={item.ref}
                                           style={{
                                                 padding: 0,
                                                 margin: 0,
@@ -79,7 +78,7 @@ export function Barcode({ labels, currencyUnit }) {
                                                       fontSize: '12px',
                                                       transform: 'translateX(-50%)'
                                                 }}>{item.price + currencyUnit}</label>
-                                                <img ref={myRef} src="" alt="test" />
+                                                <img ref={item.ref} src="" alt="test" />
                                                 <label style={{
                                                       position: 'absolute',
                                                       bottom: 0,
