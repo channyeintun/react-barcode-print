@@ -11,7 +11,7 @@ const JSBARCODE_OPTIONS = {
       displayValue: false
 };
 
-export function Barcode({ labels, currencyUnit }) {
+export const Barcode = React.forwardRef(function ({ labels, currencyUnit, ref }) {
       const [bindRefData, setBindRefData] = useState(null);
 
       // generating barcode must happen only after mounted
@@ -39,11 +39,13 @@ export function Barcode({ labels, currencyUnit }) {
             }
       }, [isMounted]);
       return (
-            <div style={{
-                  padding: 0,
-                  width: '102mm',
-                  marginLeft: '1.5mm'
-            }}>
+            <div
+                  ref={ref}
+                  style={{
+                        padding: 0,
+                        width: '102mm',
+                        marginLeft: '1.5mm'
+                  }}>
                   <div style={{
                         padding: 0,
                         margin: 'auto',
@@ -94,7 +96,7 @@ export function Barcode({ labels, currencyUnit }) {
                   </div>
             </div>
       );
-}
+});
 
 Barcode.propTypes = {
       labels: PropTypes.arrayOf(
@@ -106,7 +108,12 @@ Barcode.propTypes = {
                         PropTypes.number,
                   ]),
             })).isRequired,
-      currencyUnit: PropTypes.string
+      currencyUnit: PropTypes.string,
+      ref: PropTypes.oneOfType([
+            PropTypes.func,
+            PropTypes.shape({ current: PropTypes.instanceOf(Element) })
+      ])
+
 }
 
 Barcode.defaultProps = {

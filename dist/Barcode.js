@@ -5,7 +5,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Barcode = Barcode;
+exports.Barcode = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -46,9 +46,10 @@ var JSBARCODE_OPTIONS = {
   displayValue: false
 };
 
-function Barcode(_ref) {
+var Barcode = /*#__PURE__*/_react["default"].forwardRef(function (_ref) {
   var labels = _ref.labels,
-      currencyUnit = _ref.currencyUnit;
+      currencyUnit = _ref.currencyUnit,
+      ref = _ref.ref;
 
   var _useState = (0, _react.useState)(null),
       _useState2 = _slicedToArray(_useState, 2),
@@ -82,6 +83,7 @@ function Barcode(_ref) {
   }, [isMounted]);
 
   return /*#__PURE__*/_react["default"].createElement("div", {
+    ref: ref,
     style: {
       padding: 0,
       width: '102mm',
@@ -140,15 +142,19 @@ function Barcode(_ref) {
       }
     }, item.sku)));
   })));
-}
+});
 
+exports.Barcode = Barcode;
 Barcode.propTypes = {
   labels: _propTypes["default"].arrayOf(_propTypes["default"].shape({
     id: _propTypes["default"].number,
     price: _propTypes["default"].number,
     sku: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].number])
   })).isRequired,
-  currencyUnit: _propTypes["default"].string
+  currencyUnit: _propTypes["default"].string,
+  ref: _propTypes["default"].oneOfType([_propTypes["default"].func, _propTypes["default"].shape({
+    current: _propTypes["default"].instanceOf(Element)
+  })])
 };
 Barcode.defaultProps = {
   labels: [],
