@@ -11,7 +11,7 @@ const JSBARCODE_OPTIONS = {
       displayValue: false
 };
 
-export const Barcode = React.forwardRef(function ({ labels, currencyUnit, ref }) {
+export const Barcode = React.forwardRef(function ({ labels, currencyUnit }, ref) {
       const [bindRefData, setBindRefData] = useState(null);
 
       // generating barcode must happen only after mounted
