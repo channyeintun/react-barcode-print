@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import PropTypes from 'prop-types';
 import JsBarcode from "jsbarcode";
 import { Label } from "./Label";
-import { Container } from "./Container";
 
 const JSBARCODE_OPTIONS = {
       width: 0.93,
@@ -41,16 +40,61 @@ export function Barcode({ labels, currencyUnit }) {
             }
       }, [isMounted]);
       return (
-            <Container>
-                  {
-                        bindRefData?.map(
-                              (item,index) => <Label
-                                    key={index}
-                                    myRef={item.ref}
-                                    sku={item.sku}
-                                    price={item.price + currencyUnit} />)
-                  }
-            </Container>
+            <div style={{
+                  padding: 0,
+                  width: '102mm',
+                  marginLeft: '1.5mm'
+            }}>
+                  <div style={{
+                        padding: 0,
+                        margin: 'auto',
+                        display: 'flex',
+                        width: 'calc(102mm - 3mm)',
+                        columnGap: '1.5mm',
+                        flexWrap: 'wrap',
+                  }}>
+                        {
+                              bindRefData?.map(
+                                    (item, index) => <div key={index}
+                                          ref={item.ref}
+                                          style={{
+                                                padding: 0,
+                                                margin: 0,
+                                                height: '0.740in',
+                                                width: '32mm',
+                                                overflow: 'hidden'
+                                          }}>
+                                          <div style={{
+                                                padding: 0,
+                                                margin: 0,
+                                                overflow: 'hidden',
+                                                position: 'relative',
+                                                display: 'grid',
+                                                placeItems: 'center',
+                                                height: 'calc(100% - 2px)'
+                                          }}>
+                                                <label style={{
+                                                      position: 'absolute',
+                                                      top: 4,
+                                                      left: '50%',
+                                                      fontSize: '12px',
+                                                      transform: 'translateX(-50%)'
+                                                }}>{item.price + currencyUnit}</label>
+                                                <img ref={myRef} src="" alt="test" />
+                                                <label style={{
+                                                      position: 'absolute',
+                                                      bottom: 0,
+                                                      textAlign: 'center',
+                                                      fontSize: '12px',
+                                                      fontWeight: '600',
+                                                      lineHeight: '1.13rem',
+                                                      width: '100%'
+                                                }}>{item.sku}</label>
+                                          </div>
+                                    </div>)
+                        }
+                  </div>
+            </div>
       );
 }
 

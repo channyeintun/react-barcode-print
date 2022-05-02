@@ -1,6 +1,6 @@
 {
       "name": "react-barcode-print",
-      "version": "0.3.6",
+      "version": "0.3.7",
       "description": "react component to print barcode",
       "main": "dist/index.js",
       "files": [

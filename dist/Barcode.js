@@ -15,8 +15,6 @@ var _jsbarcode = _interopRequireDefault(require("jsbarcode"));
 
 var _Label = require("./Label");
 
-var _Container = require("./Container");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -85,14 +83,66 @@ function Barcode(_ref) {
     }
   }, [isMounted]);
 
-  return /*#__PURE__*/_react["default"].createElement(_Container.Container, null, bindRefData === null || bindRefData === void 0 ? void 0 : bindRefData.map(function (item) {
-    return /*#__PURE__*/_react["default"].createElement(_Label.Label, {
-      key: item.id,
-      myRef: item.ref,
-      sku: item.sku,
-      price: item.price + currencyUnit
-    });
-  }));
+  return /*#__PURE__*/_react["default"].createElement("div", {
+    style: {
+      padding: 0,
+      width: '102mm',
+      marginLeft: '1.5mm'
+    }
+  }, /*#__PURE__*/_react["default"].createElement("div", {
+    style: {
+      padding: 0,
+      margin: 'auto',
+      display: 'flex',
+      width: 'calc(102mm - 3mm)',
+      columnGap: '1.5mm',
+      flexWrap: 'wrap'
+    }
+  }, bindRefData === null || bindRefData === void 0 ? void 0 : bindRefData.map(function (item, index) {
+    return /*#__PURE__*/_react["default"].createElement("div", {
+      key: index,
+      ref: item.ref,
+      style: {
+        padding: 0,
+        margin: 0,
+        height: '0.740in',
+        width: '32mm',
+        overflow: 'hidden'
+      }
+    }, /*#__PURE__*/_react["default"].createElement("div", {
+      style: {
+        padding: 0,
+        margin: 0,
+        overflow: 'hidden',
+        position: 'relative',
+        display: 'grid',
+        placeItems: 'center',
+        height: 'calc(100% - 2px)'
+      }
+    }, /*#__PURE__*/_react["default"].createElement("label", {
+      style: {
+        position: 'absolute',
+        top: 4,
+        left: '50%',
+        fontSize: '12px',
+        transform: 'translateX(-50%)'
+      }
+    }, item.price + currencyUnit), /*#__PURE__*/_react["default"].createElement("img", {
+      ref: myRef,
+      src: "",
+      alt: "test"
+    }), /*#__PURE__*/_react["default"].createElement("label", {
+      style: {
+        position: 'absolute',
+        bottom: 0,
+        textAlign: 'center',
+        fontSize: '12px',
+        fontWeight: '600',
+        lineHeight: '1.13rem',
+        width: '100%'
+      }
+    }, item.sku)));
+  })));
 }
 
 Barcode.propTypes = {
