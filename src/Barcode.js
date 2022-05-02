@@ -44,8 +44,8 @@ export function Barcode({ labels, currencyUnit }) {
             <Container>
                   {
                         bindRefData?.map(
-                              item => <Label
-                                    key={item.id}
+                              (item,index) => <Label
+                                    key={index}
                                     myRef={item.ref}
                                     sku={item.sku}
                                     price={item.price + currencyUnit} />)
