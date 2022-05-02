@@ -46,10 +46,9 @@ var JSBARCODE_OPTIONS = {
   displayValue: false
 };
 
-var Barcode = /*#__PURE__*/_react["default"].forwardRef(function (_ref) {
+var Barcode = /*#__PURE__*/_react["default"].forwardRef(function (_ref, ref) {
   var labels = _ref.labels,
-      currencyUnit = _ref.currencyUnit,
-      ref = _ref.ref;
+      currencyUnit = _ref.currencyUnit;
 
   var _useState = (0, _react.useState)(null),
       _useState2 = _slicedToArray(_useState, 2),

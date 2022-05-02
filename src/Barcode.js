@@ -109,10 +109,6 @@ Barcode.propTypes = {
                   ]),
             })).isRequired,
       currencyUnit: PropTypes.string,
-      ref: PropTypes.oneOfType([
-            PropTypes.func,
-            PropTypes.shape({ current: PropTypes.instanceOf(Element) })
-      ])
 
 }
 
