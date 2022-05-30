@@ -78,7 +78,8 @@ export const Barcode = React.forwardRef(function ({ labels, currencyUnit }, ref)
                                                       top: 4,
                                                       left: '50%',
                                                       fontSize: '12px',
-                                                      transform: 'translateX(-50%)'
+                                                      transform: 'translateX(-50%)',
+                                                      zIndex:'3'
                                                 }}>{item.price + currencyUnit}</label>
                                                 <svg ref={item.ref} />
                                                 <label style={{

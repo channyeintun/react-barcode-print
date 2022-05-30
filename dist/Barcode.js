@@ -123,7 +123,8 @@ var Barcode = /*#__PURE__*/_react["default"].forwardRef(function (_ref, ref) {
         top: 4,
         left: '50%',
         fontSize: '12px',
-        transform: 'translateX(-50%)'
+        transform: 'translateX(-50%)',
+        zIndex: '3'
       }
     }, item.price + currencyUnit), /*#__PURE__*/_react["default"].createElement("svg", {
       ref: item.ref
