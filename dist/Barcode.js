@@ -125,10 +125,8 @@ var Barcode = /*#__PURE__*/_react["default"].forwardRef(function (_ref, ref) {
         fontSize: '12px',
         transform: 'translateX(-50%)'
       }
-    }, item.price + currencyUnit), /*#__PURE__*/_react["default"].createElement("img", {
-      ref: item.ref,
-      src: "",
-      alt: "test"
+    }, item.price + currencyUnit), /*#__PURE__*/_react["default"].createElement("svg", {
+      ref: item.ref
     }), /*#__PURE__*/_react["default"].createElement("label", {
       style: {
         position: 'absolute',
@@ -150,10 +148,7 @@ Barcode.propTypes = {
     price: _propTypes["default"].number,
     sku: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].number])
   })).isRequired,
-  currencyUnit: _propTypes["default"].string,
-  ref: _propTypes["default"].oneOfType([_propTypes["default"].func, _propTypes["default"].shape({
-    current: _propTypes["default"].instanceOf(Element)
-  })])
+  currencyUnit: _propTypes["default"].string
 };
 Barcode.defaultProps = {
   labels: [],
